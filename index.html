@@ -3,34 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas</title>
+    <title>EJERCICIO 4</title>
     <style type="text/css">
         body{
             background-color: rgb(255, 255, 255);
         }
 
         canvas{
-            background-color: rgb(39, 26, 26);
+            background-color: rgb(54, 54, 54);
         }
     </style>
     
 </head>
 <body>
-    <canvas id="myCanvas" width="600" height="500"></canvas>
+    <canvas id="myCanvas" width="900" height="900"></canvas>
 
     <script type="text/javascript">
         const myCanvas = document.getElementById("myCanvas");
 
         const ctx = myCanvas.getContext("2d");
 
-        ctx.fillStyle = "#ff5733"
-        ctx.fillRect(20,20,100,100);
-        
-        ctx.fillStyle = "#afff33"
-        ctx.fillRect(100,100,100,100);
-        
+
+        //cuadrado 1
+        ctx.strokeRect(160,160,100,100);
+
+       //cuadrado 2
+        ctx.fillRect(200,200,100,100,);
+        //cuadrado 3
         ctx.fillStyle = "#33d1ff"
-        ctx.fillRect(180,180,100,100);
+        ctx.fillRect(250,250,100,100);
+        //cuadrado 4
+        ctx.strokeStyle = "rgba(1, 239, 36, 0.6)"
+        ctx.strokeRect(300,300,100,100);
+
+
+
+     // Start a new Path
+     ctx.beginPath();
+        ctx.moveTo(413,200);
+        ctx.lineTo(370, 250);
+        ctx.lineTo(460, 250);
+        ctx.closePath();
+
+        ctx.fillStyle = "rgba(105, 09, 155, 0.6)";
+        ctx.fill(); 
+
+        // Draw the Path
+
+        ctx.strokeStyle = "rgba(135, 199, 255, 0.6)";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+
+        //circulo relleno
+        ctx.beginPath();
+        ctx.arc(190, 450, 50, 0, 2 * Math.PI);
+        ctx.strokeStyle = "#0119ef";
+        ctx.lineWidth = 2;
+        
+        ctx.fillStyle = "#114a3e";
+        
+        ctx.stroke();   
+        ctx.fill();
+
+
+        //circulo solo borde
+        ctx.beginPath();
+        ctx.arc(240, 450, 50, 0, 2 * Math.PI);
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+
+
     </script>
 </body>
 </html>
