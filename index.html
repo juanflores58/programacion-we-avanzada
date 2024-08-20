@@ -110,6 +110,12 @@
         };
         
 
+        // Rectángulo degradado
+        const gradient = ctx.createLinearGradient(700, 650, 610, 700);
+        gradient.addColorStop(0, 'blue');
+        gradient.addColorStop(1, 'red');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(600, 650, 200, 100);
 
 
     </script>
