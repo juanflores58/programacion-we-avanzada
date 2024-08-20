@@ -117,6 +117,15 @@
         ctx.fillStyle = gradient;
         ctx.fillRect(600, 650, 200, 100);
 
+        // Rectángulo con degradado rojo
+        const redGradient = ctx.createRadialGradient(500, 350, 20, 500, 350, 50);
+        redGradient.addColorStop(0, 'red');
+        redGradient.addColorStop(0.3, 'green');
+        redGradient.addColorStop(0.5, 'white');
+        redGradient.addColorStop(1, 'blue');
+        ctx.fillStyle = redGradient;
+        ctx.fillRect(450, 300, 100, 75);
+
 
     </script>
 </body>
