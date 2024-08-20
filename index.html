@@ -102,7 +102,12 @@
         ctx.fillText('Círculo solo borde', 440, 450); 
 
 
-
+        // Imagen derecha (gato):D
+        const img = new Image();
+        img.src = "https://imgs.search.brave.com/txT6JQ-myopQQP_dNkXNZkp0Kf0k_cqjYp6y2UWDjbQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL3RodW1icy81/ODBiNTdmYmQ5OTk2/ZTI0YmM0M2JiOTgu/cG5n"; // Reemplaza con la URL de la imagen del personaje
+        img.onload = function() {    
+        ctx.drawImage(img, 500, 100, 300, 350);
+        };
         
 
 
